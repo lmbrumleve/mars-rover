@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mars Rover Simulator</title>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+        <script type="module" src = "interface.js"></script>
+        <script type="module" src = "rover.js"></script>
+        <script type="module" src = "message.js"></script>
+        <script type="module" src = "command.js"></script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Mars Rover Simulator</h1>
+        </div>
+        
+        <div class = "leftAlign">
+            <button id = "solarCharging" class="addMore" title="Use solar charging to charge rover by 25W.">Solar Charging</button>
+            <button id = "hillClimbing" class="addMore" title="Use hill climbing mode for hills and rough terrain. Hill climbing uses 10W per move.">Hill Climbing</button>
+            <button id = "rimfax" class="addMore" title="Use Rover Imager for Mars' Subsurface Exploration (RIMFAX) to search for water beneath Mars' surface.">RIMFAX</button>
+        </div>
+        <div class="mapAndArrows">
+            <div id = "marsBackground">
+                <img src = "./images/Rover_icon.png" height = "75" width = "75" id = "rover"/>
+                <img src = "./images/Water_Searching_Icon.png" height = "45" width = "45" id = "water"/>
+            </div>
+            <div class="roverStatus">
+                <div id = "grid">
+                    <img src = "./images/Water_Found_Icon.png" id ="waterFound" style = "visibility:hidden"/>  
+                </div>
+                <p id = "coordinateStatus"></p>    
+            </div>
+            <div class="arrows">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <button id="up">▲</button>
+                <div></div>
+                <button id="left">◄</button>
+                <div></div>
+                <button id="right">►</button>
+                <div></div>
+                <button id="down">▼</button>
+                <div></div>
+               </div>
+            </div>
+                <button id = "missionAbort" class="addMore left" title="Click to abort.">Abort Mission</button>
+    </body>
+</html>
